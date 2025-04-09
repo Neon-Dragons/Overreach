@@ -24,3 +24,4 @@ if (global.pending_load) {
     y = global.load_y;
     global.pending_load = false;
 }
+last_hit_time = 0;

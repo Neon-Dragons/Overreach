@@ -3,6 +3,7 @@
 // ============================
 if (global.game_state != "playing") exit;
 
+
 // ============================
 // === SMOOTH HP INTERPOLATION ===
 // ============================
@@ -38,29 +39,52 @@ if (keyboard_check_pressed(vk_space) && place_meeting(x, y + 1, obj_surface) && 
 // ============================
 // === HORIZONTAL COLLISION ==
 // ============================
-if (place_meeting(x + hsp, y, obj_surface)) {
-    while (!place_meeting(x + sign(hsp), y, obj_surface)) {
-        x += sign(hsp);
+// === Horizontal Movement & Collision ===
+if (hsp != 0) {
+    var sign_h = sign(hsp);
+    repeat(abs(hsp)) {
+        if (!place_meeting(x + sign_h, y, obj_surface) && !place_meeting(x + sign_h, y, obj_enemy)) {
+            x += sign_h;
+        } else {
+            hsp = 0;
+            break;
+        }
     }
-    hsp = 0;
 }
-x += hsp;
 
-// ============================
-// === VERTICAL COLLISION ====
-// ============================
-if (place_meeting(x, y + vsp, obj_surface)) {
-    while (!place_meeting(x, y + sign(vsp), obj_surface)) {
-        y += sign(vsp);
+// === Vertical Movement & Collision ===
+if (vsp != 0) {
+    var sign_v = sign(vsp);
+    repeat(abs(vsp)) {
+        if (!place_meeting(x, y + sign_v, obj_surface) && !place_meeting(x, y + sign_v, obj_enemy)) {
+            y += sign_v;
+        } else {
+            vsp = 0;
+            break;
+        }
     }
-    vsp = 0;
 }
-y += vsp;
 
 // ============================
 // === GROUND CHECK ==========
 // ============================
 grounded = place_meeting(x, y + 1, obj_surface);
+
+
+// === CONTACT DAMAGE FROM ENEMY (WITH SOLID COLLISIONS) ===
+if (current_time - last_hit_time > 1000) { // 1 sec i-frames
+    with (obj_enemy) {
+        if (rectangle_in_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom,
+                                   other.bbox_left, other.bbox_top, other.bbox_right, other.bbox_bottom)) {
+            other.hp -= 10;
+            other.last_hit_time = current_time;
+
+            // Knockback
+            var knock_dir = sign(other.x - x);
+            other.hsp = 4 * knock_dir;
+        }
+    }
+}
 
 // ============================
 // === HEALING IF UNHIT ======
@@ -120,6 +144,8 @@ if (weapon_mode == "ranged" && keyboard_check_pressed(ord("X"))) {
 if (hp <= 0 && global.game_state != "gameover") {
     global.game_state = "gameover";
     show_debug_message("Player died from HP loss!");
+	visible=false;
+	
 }
 
 with (obj_death) {

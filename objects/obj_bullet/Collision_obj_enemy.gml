@@ -1,5 +1,8 @@
+// Damage the enemy
 other.hp -= 10;
-if (other.hp <= 0) {
-    instance_destroy(other);
-}
-instance_destroy(); // Bullet disappears on hit
+
+// Optional: red flash effect
+other.image_blend = c_red;
+
+// Bullet disappears
+instance_destroy();
