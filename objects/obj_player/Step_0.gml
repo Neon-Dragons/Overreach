@@ -136,7 +136,11 @@ if (weapon_mode == "melee" && keyboard_check_pressed(ord("X"))) {
 if (weapon_mode == "ranged" && keyboard_check_pressed(ord("X"))) {
     var b = instance_create_layer(x + facing * 12, y - 8, layer, obj_bullet);
     b.image_xscale = facing;
+
+    b.direction = (facing == 1) ? 0 : 180; // Right = 0°, Left = 180°
+    b.speed = 8;
 }
+
 
 // ============================
 // === GAME OVER ON 0 HP =====
