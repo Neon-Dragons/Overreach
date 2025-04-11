@@ -8,3 +8,4 @@ attack_range = 16; // Distance to check for attacking
 attack_cooldown = 1000; // in milliseconds
 last_attack_time = 0;
 damage = 10;
+shoot_timer = irandom_range(60, 120); // shoots every 1–2 seconds
