@@ -155,8 +155,11 @@ if (hp <= 0 && global.game_state != "gameover") {
 with (obj_death) {
     if (rectangle_in_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom,
                                other.bbox_left, other.bbox_top, other.bbox_right, other.bbox_bottom)) {
-        global.game_state = "gameover";
-        show_debug_message("Fell into custom death zone!");
+        if (global.game_state != "gameover") {
+            global.game_state = "gameover";
+            show_debug_message("Player fell into death zone!");
+            other.visible = false; // <- this hides the player
+        }
     }
 }
 
