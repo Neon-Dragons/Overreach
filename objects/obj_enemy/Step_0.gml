@@ -1,4 +1,5 @@
 if (hp <= 0) {
+	audio_play_sound(snd_enemy_death,1,false)
     instance_destroy();
     exit;
 }

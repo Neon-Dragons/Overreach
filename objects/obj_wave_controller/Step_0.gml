@@ -1,5 +1,6 @@
 // === Don't do anything unless the game is active ===
 if (global.game_state != "playing") exit;
+if (!wave_triggered) return;
 
 // === Countdown between waves ===
 if (!wave_active) {

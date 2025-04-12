@@ -72,19 +72,19 @@ grounded = place_meeting(x, y + 1, obj_surface);
 
 
 // === CONTACT DAMAGE FROM ENEMY (WITH SOLID COLLISIONS) ===
-if (current_time - last_hit_time > 1000) { // 1 sec i-frames
-    with (obj_enemy) {
-        if (rectangle_in_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom,
-                                   other.bbox_left, other.bbox_top, other.bbox_right, other.bbox_bottom)) {
-            other.hp -= 10;
-            other.last_hit_time = current_time;
+//if (current_time - last_hit_time > 1000) { // 1 sec i-frames
+//    with (obj_enemy) {
+//        if (rectangle_in_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom,
+//                                   other.bbox_left, other.bbox_top, other.bbox_right, other.bbox_bottom)) {
+//            other.hp -= 10;
+//            other.last_hit_time = current_time;
 
             // Knockback
-            var knock_dir = sign(other.x - x);
-            other.hsp = 4 * knock_dir;
-        }
-    }
-}
+//            var knock_dir = sign(other.x - x);
+//            other.hsp = 4 * knock_dir;
+//        }
+//    }
+//}
 
 // ============================
 // === HEALING IF UNHIT ======
@@ -113,19 +113,20 @@ else {
 // ============================
 // === WEAPON SWAPPING =======
 // ============================
-if (keyboard_check_pressed(ord("1"))) {
-    weapon_mode = "melee";
-}
-if (keyboard_check_pressed(ord("2"))) {
-    weapon_mode = "ranged";
+if (keyboard_check_pressed(ord("Q"))) {
+    if (weapon_mode == "melee")
+		weapon_mode = "ranged"
+	else
+		weapon_mode = "melee"
 }
 
 // ============================
 // === MELEE ATTACK =========
 // ============================
-if (weapon_mode == "melee" && keyboard_check_pressed(ord("X"))) {
+if (weapon_mode == "melee" && keyboard_check_pressed(ord("F"))) {
+	audio_play_sound(snd_melee,1, false)
     var x_offset = facing * 16;
-    var y_offset = -sprite_height / 2;
+    var y_offset = -sprite_height / 1.5;
     var hit = instance_create_layer(x + x_offset, y + y_offset, layer, obj_melee_hitbox);
     hit.image_xscale = facing;
 }
@@ -133,12 +134,16 @@ if (weapon_mode == "melee" && keyboard_check_pressed(ord("X"))) {
 // ============================
 // === RANGED ATTACK =========
 // ============================
-if (weapon_mode == "ranged" && keyboard_check_pressed(ord("X"))) {
-    var b = instance_create_layer(x + facing * 12, y - 8, layer, obj_bullet);
+if (weapon_mode == "ranged" && keyboard_check_pressed(ord("F"))) {
+	audio_play_sound(snd_gunshot,1,false)
+	if (sprite_index == spr_player_duck)
+		var b = instance_create_layer(x + facing * 12, y - 20, layer, obj_bullet);
+	else
+		b = instance_create_layer(x + facing * 12, y - 40, layer, obj_bullet);
     b.image_xscale = facing;
 
     b.direction = (facing == 1) ? 0 : 180; // Right = 0°, Left = 180°
-    b.speed = 8;
+    b.speed = 24;
 }
 
 
