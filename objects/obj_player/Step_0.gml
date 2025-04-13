@@ -4,6 +4,7 @@
 if (global.game_state != "playing") exit;
 
 
+
 // ============================
 // === SMOOTH HP INTERPOLATION ===
 // ============================
@@ -19,6 +20,10 @@ if (keyboard_check(ord("D"))) move += 1;
 is_ducking = keyboard_check(ord("S")) || keyboard_check(vk_down);
 is_sneaking = keyboard_check(vk_shift);
 
+//Collisions
+if (place_meeting(x + move, y, obj_enemy) == true) {
+	move = 0;
+}
 // ============================
 // === SPEED + FACING ========
 // ============================

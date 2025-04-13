@@ -2,6 +2,11 @@
 if (global.game_state != "playing") exit;
 if (!wave_triggered) return;
 
+// stop waves after limit is reached
+if (wave_limit < 0) {
+	wave_triggered = false;
+	wave_limit = 3;
+}
 // === Countdown between waves ===
 if (!wave_active) {
     spawn_timer -= 1;
@@ -15,6 +20,7 @@ else {
     if (instance_exists(obj_enemy) == false) {
         wave_active = false;
         wave += 1;
+		wave_limit -= 1;
         spawn_timer = break_time;
     }
 }

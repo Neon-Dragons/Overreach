@@ -21,16 +21,26 @@ if (!place_meeting(x, y + vsp, obj_surface)) {
     vsp = 0;
 }
 
+//Collisions
+if (place_meeting(x + vsp, y, obj_player) == true) {
+	vsp = 0;
+}
+if (place_meeting(x - vsp, y, obj_player) == true) {
+	vsp = 0;
+}
+
 // === Patrol Movement ===
 x += facing * move_speed;
 
 var front_x = x + facing * 8;
 var is_ground_ahead = place_meeting(front_x, y + 1, obj_surface);
 var is_wall_ahead = place_meeting(front_x, y, obj_surface);
+var is_player_ahead = place_meeting(front_x, y, obj_player);
 
-if (!is_ground_ahead || is_wall_ahead) {
+if (!is_ground_ahead || is_wall_ahead || is_player_ahead) {
     facing *= -1;
 }
+
 
 image_xscale = facing;
 
