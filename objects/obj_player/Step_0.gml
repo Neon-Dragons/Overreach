@@ -24,6 +24,9 @@ is_sneaking = keyboard_check(vk_shift);
 if (place_meeting(x + move, y, obj_enemy) == true) {
 	move = 0;
 }
+if (place_meeting(x + move, y, obj_wall) == true) {
+	move= 0;
+}
 // ============================
 // === SPEED + FACING ========
 // ============================

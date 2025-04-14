@@ -30,15 +30,25 @@ if (place_meeting(x - vsp, y, obj_player) == true) {
 }
 
 // === Patrol Movement ===
-x += facing * move_speed;
+//x += facing * move_speed;
 
-var front_x = x + facing * 8;
-var is_ground_ahead = place_meeting(front_x, y + 1, obj_surface);
-var is_wall_ahead = place_meeting(front_x, y, obj_surface);
-var is_player_ahead = place_meeting(front_x, y, obj_player);
+//var front_x = x + facing * 8;
+//var is_ground_ahead = place_meeting(front_x, y + 1, obj_surface);
+//var is_wall_ahead = place_meeting(front_x, y, obj_surface);
+//var is_player_ahead = place_meeting(front_x, y, obj_player);
 
-if (!is_ground_ahead || is_wall_ahead || is_player_ahead) {
-    facing *= -1;
+//if (!is_ground_ahead || is_wall_ahead || is_player_ahead) {
+//    facing *= -1;
+//}
+
+if (distance_to_object(obj_player) < detectionRange ) {
+	mp_linear_step(obj_player.x, obj_player.y, move_speed, 1);
+	timer--
+	if (timer <= 0) {
+		instance_create_layer(x, y, "Instances", obj_bullet_enemy)
+		timer = 20;
+	}
+
 }
 
 
