@@ -59,11 +59,15 @@ if (shoot_timer <= 0) {
     shoot_timer = irandom_range(60, 120);
 
     // Spawn bullet
-    var b = instance_create_layer(x, y, layer, obj_enemy_bullet);
+    var shoot_x = x;
+var shoot_y = y - sprite_height / 2; // Adjust based on your enemy sprite's layout
+var b = instance_create_layer(shoot_x, shoot_y, layer, obj_enemy_bullet);
+
 
     // Aim at player
     if (instance_exists(obj_player)) {
-        b.direction = point_direction(x, y, obj_player.x, obj_player.y);
+       b.direction = point_direction(x, y, obj_player.x, obj_player.y);
+
     } else {
         b.direction = facing == 1 ? 0 : 180; // fallback
     }

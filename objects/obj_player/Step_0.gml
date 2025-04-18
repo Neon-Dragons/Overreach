@@ -136,9 +136,7 @@ if (weapon_mode == "melee" && keyboard_check_pressed(ord("X"))) {
 if (weapon_mode == "ranged" && keyboard_check_pressed(ord("X"))) {
     var b = instance_create_layer(x + facing * 12, y - 8, layer, obj_bullet);
     b.image_xscale = facing;
-
-    b.direction = (facing == 1) ? 0 : 180; // Right = 0°, Left = 180°
-    b.speed = 8;
+    b.hsp = 12 * facing; // 👈 Assign horizontal speed based on direction
 }
 
 
@@ -155,11 +153,8 @@ if (hp <= 0 && global.game_state != "gameover") {
 with (obj_death) {
     if (rectangle_in_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom,
                                other.bbox_left, other.bbox_top, other.bbox_right, other.bbox_bottom)) {
-        if (global.game_state != "gameover") {
-            global.game_state = "gameover";
-            show_debug_message("Player fell into death zone!");
-            other.visible = false; // <- this hides the player
-        }
+        global.game_state = "gameover";
+        show_debug_message("Fell into custom death zone!");
     }
 }
 
