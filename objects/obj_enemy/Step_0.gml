@@ -41,6 +41,7 @@ if (place_meeting(x - vsp, y, obj_player) == true) {
 //    facing *= -1;
 //}
 
+
 if (instance_exists(obj_player)) {
     var player = instance_nearest(x, y, obj_player); // safest way to get position
 

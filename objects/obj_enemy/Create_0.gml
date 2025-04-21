@@ -10,3 +10,4 @@ last_attack_time = 0;
 damage = 10;
 timer = 0;
 bullet_speed = 6; // or whatever speed you like
+
