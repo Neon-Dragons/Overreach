@@ -41,12 +41,25 @@ if (place_meeting(x - vsp, y, obj_player) == true) {
 //    facing *= -1;
 //}
 
-if (distance_to_object(obj_player) < detectionRange ) {
-	mp_linear_step(obj_player.x, obj_player.y, move_speed, 1);
+if ( distance_to_object(obj_player) >= 100 && distance_to_object(obj_player) < detectionRange) {
+	
+	mp_linear_step_object(obj_player.x, obj_player.y, move_speed, obj_player);
 	timer--
 	if (timer <= 0) {
 		instance_create_layer(x, y, "Instances", obj_bullet_enemy)
 		timer = 20;
+
+	}
+	
+
+}
+
+if (distance_to_object(obj_player) <= 100) {
+	timer--
+	if (timer <= 0) {
+		instance_create_layer(x, y, "Instances", obj_bullet_enemy)
+		timer = 20;
+
 	}
 
 }

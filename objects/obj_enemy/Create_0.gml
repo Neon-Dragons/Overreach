@@ -8,4 +8,4 @@ attack_range = 16; // Distance to check for attacking
 attack_cooldown = 1000; // in milliseconds
 last_attack_time = 0;
 damage = 10;
-timer = 0
+timer = 0;
