@@ -46,19 +46,21 @@ if (instance_exists(obj_player)) {
     var player = instance_nearest(x, y, obj_player); // safest way to get position
 
     if (distance_to_object(player) < detectionRange) {
-        mp_linear_step(player.x, player.y, move_speed, 1);
+		if (distance_to_object(player) >= stoppingRange)
+			mp_linear_step_object(player.x, player.y, move_speed, obj_player);
         timer--;
 
         if (timer <= 0) {
             var spawn_x = x - sprite_xoffset + sprite_width / 2;
             var spawn_y = y - sprite_yoffset + sprite_height / 2;
-
+			
+			if (distance_to_object(player) <= sightRange) {
+			audio_play_sound(snd_gunshot,1,false)
             var bullet = instance_create_layer(spawn_x, spawn_y, "Instances", obj_bullet_enemy);
-
-            var angle = point_direction(spawn_x, spawn_y, player.x, player.y);
+			
+            var angle = point_direction(spawn_x, 0, player.x, 0);
             bullet.direction = angle;
-            bullet.speed = 6;
-
+			}
             timer = 20;
         }
     }
