@@ -38,6 +38,7 @@
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_death","path":"objects/obj_death/obj_death.yy",},},
+    {"id":{"name":"obj_dialogue_child1_end","path":"objects/obj_dialogue_child1_end/obj_dialogue_child1_end.yy",},},
     {"id":{"name":"obj_dialogue_child1","path":"objects/obj_dialogue_child1/obj_dialogue_child1.yy",},},
     {"id":{"name":"obj_dialogue","path":"objects/obj_dialogue/obj_dialogue.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},

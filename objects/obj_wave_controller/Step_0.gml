@@ -5,6 +5,7 @@ if (!wave_triggered) return;
 // stop waves after limit is reached
 if (wave_limit < 0) {
 	wave_triggered = false;
+	instance_create_layer(x,y,"Instances",obj_dialogue_child1_end);
 	wave_limit = 3;
 }
 // === Countdown between waves ===
