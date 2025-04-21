@@ -41,34 +41,39 @@ if (place_meeting(x - vsp, y, obj_player) == true) {
 //    facing *= -1;
 //}
 
-if ( distance_to_object(obj_player) >= 100 && distance_to_object(obj_player) < detectionRange) {
-	
-	mp_linear_step_object(obj_player.x, obj_player.y, move_speed, obj_player);
-	timer--
-	if (timer <= 0) {
-		instance_create_layer(x, y, "Instances", obj_bullet_enemy)
-		timer = 20;
 
-	}
-	
+if (instance_exists(obj_player)) {
+    var player = instance_nearest(x, y, obj_player); // safest way to get position
 
+    if (distance_to_object(player) < detectionRange) {
+        mp_linear_step(player.x, player.y, move_speed, 1);
+        timer--;
+
+        if (timer <= 0) {
+            var spawn_x = x - sprite_xoffset + sprite_width / 2;
+            var spawn_y = y - sprite_yoffset + sprite_height / 2;
+
+            var bullet = instance_create_layer(spawn_x, spawn_y, "Instances", obj_bullet_enemy);
+
+            var angle = point_direction(spawn_x, spawn_y, player.x, player.y);
+            bullet.direction = angle;
+            bullet.speed = 6;
+
+            timer = 20;
+        }
+    }
 }
 
-if (distance_to_object(obj_player) <= 100) {
-	timer--
-	if (timer <= 0) {
-		instance_create_layer(x, y, "Instances", obj_bullet_enemy)
-		timer = 20;
 
-	}
 
-}
+
+
 
 
 image_xscale = facing;
 
 
-image_xscale = facing; // Optional: flip sprite
+//image_xscale = facing; // Optional: flip sprite
 // === Melee Attack ===
 if (current_time - last_attack_time > attack_cooldown) {
     if (instance_exists(obj_player)) {
