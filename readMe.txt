@@ -1,3 +1,8 @@
+Artist: Ali Chaaraoui
+Game Design: Nafin Vwich
+Programmer: Aakash Vidiyala
+Producer: Trenton Scott
+
 Player Controls:
 D – Move Right
 A – Move Left
