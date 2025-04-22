@@ -176,3 +176,7 @@ with (obj_death) {
     }
 }
 
+
+//Cheats
+if (keyboard_check_pressed(ord("L")))
+	room_goto_next();
