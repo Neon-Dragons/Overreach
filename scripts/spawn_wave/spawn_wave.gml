@@ -1,5 +1,5 @@
 function spawn_wave(w, startPosition, endPosition) {
-    var count = 3 + w; // Increase enemy count per wave
+    var count = 1 + w; // Increase enemy count per wave
 
     for (var i = 0; i < count; i++) {
         var xx = random_range(startPosition, endPosition);

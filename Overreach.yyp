@@ -34,6 +34,7 @@
   },
   "name":"OverReach",
   "resources":[
+    {"id":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},},
     {"id":{"name":"obj_bullet_enemy","path":"objects/obj_bullet_enemy/obj_bullet_enemy.yy",},},
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
@@ -41,6 +42,8 @@
     {"id":{"name":"obj_dialogue_child1_end","path":"objects/obj_dialogue_child1_end/obj_dialogue_child1_end.yy",},},
     {"id":{"name":"obj_dialogue_child1","path":"objects/obj_dialogue_child1/obj_dialogue_child1.yy",},},
     {"id":{"name":"obj_dialogue","path":"objects/obj_dialogue/obj_dialogue.yy",},},
+    {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},},
+    {"id":{"name":"obj_enemy_patroller","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_melee_hitbox","path":"objects/obj_melee_hitbox/obj_melee_hitbox.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
@@ -51,6 +54,7 @@
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"obj_wave_controller","path":"objects/obj_wave_controller/obj_wave_controller.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
+    {"id":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
     {"id":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"id":{"name":"Dialogue","path":"scripts/Dialogue/Dialogue.yy",},},
     {"id":{"name":"scr_load_game","path":"scripts/scr_load_game/scr_load_game.yy",},},
@@ -59,8 +63,10 @@
     {"id":{"name":"snd_enemy_death","path":"sounds/snd_enemy_death/snd_enemy_death.yy",},},
     {"id":{"name":"snd_gunshot","path":"sounds/snd_gunshot/snd_gunshot.yy",},},
     {"id":{"name":"snd_melee","path":"sounds/snd_melee/snd_melee.yy",},},
+    {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
     {"id":{"name":"spr_bullet_enemy","path":"sprites/spr_bullet_enemy/spr_bullet_enemy.yy",},},
     {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
+    {"id":{"name":"spr_door","path":"sprites/spr_door/spr_door.yy",},},
     {"id":{"name":"spr_enemy_placeholder","path":"sprites/spr_enemy_placeholder/spr_enemy_placeholder.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_melee_hitbox_placeholder","path":"sprites/spr_melee_hitbox_placeholder/spr_melee_hitbox_placeholder.yy",},},
@@ -78,6 +84,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
+    {"roomId":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
