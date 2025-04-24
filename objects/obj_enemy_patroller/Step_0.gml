@@ -48,12 +48,11 @@ if (instance_exists(obj_player)) {
     if (distance_to_object(player) < detectionRange) {
 		if (distance_to_object(player) >= stoppingRange) {
 			if (x < player.x) {
-				x += move_speed;
-				if (place_meeting(x - vsp, y, obj_player) == true) {
-					x += 0;
-					}
+				if (!place_meeting(x + move_speed, y, obj_surface))
+					x += move_speed;
 				}
 				else if (x > player.x) {
+				if (!place_meeting(x - move_speed, y, obj_surface))
 					x -= move_speed;
 				}
 			}

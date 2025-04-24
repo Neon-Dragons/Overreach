@@ -44,9 +44,19 @@ if (place_meeting(x - vsp, y, obj_player) == true) {
 
 if (instance_exists(obj_player)) {
     var player = instance_nearest(x, y, obj_player); // safest way to get position
+	var dist = point_distance(x, y, player.x, player.y);
     if (distance_to_object(player) < detectionRange) {
-		if (distance_to_object(player) >= stoppingRange)
-			mp_linear_step_object(player.x, player.y, move_speed, obj_player);
+		if (distance_to_object(player) >= stoppingRange) {
+			if (x < player.x) {
+				if (!place_meeting(x + move_speed, y, obj_surface))
+					x += move_speed;
+				}
+				else if (x > player.x) {
+				if (!place_meeting(x - move_speed, y, obj_surface))
+					x -= move_speed;
+				}
+			}
+
         timer--;
 
         if (timer <= 0) {
