@@ -11,6 +11,7 @@ A – Move Left
 S – Crouch
 F – Use Weapon
 Q – Swap Weapons
+Left Ctrl - Aim
 Space – Jump
 
 Guide:
