@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bullet_turrent",
+  "%Name":"obj_bullet_turret",
   "eventList":[],
   "managed":true,
-  "name":"obj_bullet_turrent",
+  "name":"obj_bullet_turret",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_bullet_enemy",
+    "path":"objects/obj_bullet_enemy/obj_bullet_enemy.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_bullet",
+    "path":"sprites/spr_bullet/spr_bullet.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

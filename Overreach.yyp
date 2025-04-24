@@ -36,7 +36,7 @@
   "resources":[
     {"id":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},},
     {"id":{"name":"obj_bullet_enemy","path":"objects/obj_bullet_enemy/obj_bullet_enemy.yy",},},
-    {"id":{"name":"obj_bullet_turrent","path":"objects/obj_bullet_turrent/obj_bullet_turrent.yy",},},
+    {"id":{"name":"obj_bullet_turret","path":"objects/obj_bullet_turret/obj_bullet_turret.yy",},},
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_death","path":"objects/obj_death/obj_death.yy",},},
@@ -76,6 +76,7 @@
     {"id":{"name":"spawn_wave","path":"scripts/spawn_wave/spawn_wave.yy",},},
     {"id":{"name":"snd_enemy_death","path":"sounds/snd_enemy_death/snd_enemy_death.yy",},},
     {"id":{"name":"snd_gunshot","path":"sounds/snd_gunshot/snd_gunshot.yy",},},
+    {"id":{"name":"snd_machine_gun","path":"sounds/snd_machine_gun/snd_machine_gun.yy",},},
     {"id":{"name":"snd_melee","path":"sounds/snd_melee/snd_melee.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
     {"id":{"name":"spr_bullet_enemy","path":"sprites/spr_bullet_enemy/spr_bullet_enemy.yy",},},
