@@ -60,15 +60,13 @@ if (instance_exists(obj_player)) {
         timer--;
 
         if (timer <= 0) {
-            var spawn_x = x - sprite_xoffset + sprite_width / 2;
-            var spawn_y = y - sprite_yoffset + sprite_height / 2;
 			
 			if (distance_to_object(player) <= sightRange) {
 			audio_play_sound(snd_gunshot,1,false)
-            var bullet = instance_create_layer(spawn_x, spawn_y, "Instances", obj_bullet_enemy);
+            var bullet = instance_create_layer(x, y, "Instances", obj_bullet_enemy);
 			
-            var angle = point_direction(spawn_x, 0, player.x, 0);
-            bullet.direction = angle;
+            var angle = point_direction(x, y, player.x, player.y);
+            bullet.direction = angle - 5;
 			}
             timer = 20;
         }

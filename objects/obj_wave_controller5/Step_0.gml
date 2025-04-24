@@ -6,14 +6,15 @@ if (!wave_triggered) return;
 if (wave_limit < 0) {
 	wave_triggered = false;
 	instance_create_layer(x,y,"Instances",obj_dialogue_child1_end);
-	wave_limit = 2;
+	instance_create_layer(1792,352,"Instances",obj_door);
+	wave_limit = 3;
 }
 // === Countdown between waves ===
 if (!wave_active) {
     spawn_timer -= 1;
     if (spawn_timer <= 0) {
         wave_active = true;
-        spawn_wave(wave, 10, 750, 150);
+		spawn_wave_drone(wave, 5800, 7000, 750);
     }
 }
 else {
