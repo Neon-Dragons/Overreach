@@ -17,6 +17,19 @@ var move = 0;
 if (keyboard_check(ord("A"))) move -= 1;
 if (keyboard_check(ord("D"))) move += 1;
 
+// Elena Grabbing Input
+if (keyboard_check_pressed(ord("W"))) {
+	if (place_meeting(x + 4, y, obj_elena) == true || place_meeting(x - 4, y, obj_elena) == true) {
+		if (obj_elena.currentState != States.Grabbed && grounded) {
+			obj_elena.currentState = States.Grabbed;
+		}
+		else if (obj_elena.currentState == States.Grabbed && grounded) {
+			obj_elena.currentState = States.Idle;
+		}
+	}
+}
+	
+
 is_ducking = keyboard_check(ord("S")) || keyboard_check(vk_down);
 is_sneaking = keyboard_check(vk_shift);
 
@@ -30,11 +43,15 @@ if (place_meeting(x + move, y, obj_elena) == true) {
 if (place_meeting(x + move, y, obj_wall) == true) {
 	move= 0;
 }
+
+
 // ============================
 // === SPEED + FACING ========
 // ============================
 var current_speed = is_sneaking ? sneaksp : walksp;
 hsp = move * current_speed;
+
+
 
 if (move != 0) facing = move;
 
@@ -57,6 +74,10 @@ if (hsp != 0) {
         if (!place_meeting(x + sign_h, y, obj_surface) && !place_meeting(x + sign_h, y, obj_enemy)
 		&& !place_meeting(x + sign_h, y, obj_elena)) {
             x += sign_h;
+			//Elena Grabbed Movement
+			if (obj_elena.currentState == States.Grabbed) {
+				obj_elena.x += sign_h;
+			}
         } else {
             hsp = 0;
             break;
@@ -71,6 +92,10 @@ if (vsp != 0) {
         if (!place_meeting(x, y + sign_v, obj_surface) && !place_meeting(x, y + sign_v, obj_enemy)
 		&& !place_meeting(x, y + sign_v, obj_elena)) {
             y += sign_v;
+			//Elena Grabbed Movement
+			if (obj_elena.currentState == States.Grabbed) {
+				obj_elena.y += sign_v;
+			}
         } else {
             vsp = 0;
             break;

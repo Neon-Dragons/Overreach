@@ -97,3 +97,48 @@ draw_text(bar_x + bar_w / 2, bar_y + bar_h / 2,
 
 }
 
+
+//ELENA HEALTH
+if (global.game_state == "playing" && instance_exists(obj_elena) && foundElena) {
+    // draw health bar code
+
+    // === HEALTH BAR SETTINGS ===
+    var bar_x = 20;
+    var bar_y = 70; // moved 50 pixels down
+    var bar_w = 200;
+    var bar_h = 24;
+    var margin = 2;
+
+    var hp_actual = obj_elena.hp;
+    var hp_display = obj_elena.display_hp;
+    var hp_max = obj_elena.max_hp;
+
+    var ratio_actual = hp_actual / hp_max;
+    var ratio_display = hp_display / hp_max;
+
+    // === BACKGROUND BAR ===
+    draw_set_color(make_color_rgb(50, 50, 50));
+    draw_rectangle(bar_x, bar_y, bar_x + bar_w, bar_y + bar_h, false);
+
+    // === SMOOTH INTERPOLATED RED ZONE (DAMAGE LAG EFFECT) ===
+    draw_set_color(c_red);
+    draw_rectangle(bar_x + margin, bar_y + margin,
+                   bar_x + (bar_w * ratio_display) - margin,
+                   bar_y + bar_h - margin, false);
+
+    // === INSTANT GREEN ZONE (CURRENT HP) ===
+	draw_set_color(make_color_rgb(255, 105, 180));
+	draw_rectangle(bar_x + margin, bar_y + margin,
+	               bar_x + (bar_w * ratio_actual) - margin,
+	               bar_y + bar_h - margin, false);
+    // === BORDER ===
+    draw_set_color(c_white);
+    draw_rectangle(bar_x, bar_y, bar_x + bar_w, bar_y + bar_h, true);
+
+    // === TEXT ===
+    draw_set_color(c_white);
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+    draw_text(bar_x + bar_w / 2, bar_y + bar_h / 2,
+              "HP: " + string(hp_actual) + " / " + string(hp_max));
+}
