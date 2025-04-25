@@ -6,7 +6,7 @@ if (!wave_triggered) return;
 if (wave_limit < 0) {
 	wave_triggered = false;
 	instance_create_layer(x,y,"Instances",obj_dialogue_child1_end);
-	instance_create_layer(1700,352,"Instances",obj_door);
+	instance_create_layer(1888,352,"Instances",obj_door);
 	wave_limit = 3;
 }
 // === Countdown between waves ===

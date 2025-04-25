@@ -76,6 +76,7 @@
     {"id":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
     {"id":{"name":"rm_level_2","path":"rooms/rm_level_2/rm_level_2.yy",},},
     {"id":{"name":"rm_level_3","path":"rooms/rm_level_3/rm_level_3.yy",},},
+    {"id":{"name":"rm_level_3b","path":"rooms/rm_level_3b/rm_level_3b.yy",},},
     {"id":{"name":"rm_level_4","path":"rooms/rm_level_4/rm_level_4.yy",},},
     {"id":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"id":{"name":"Dialogue","path":"scripts/Dialogue/Dialogue.yy",},},
@@ -119,6 +120,7 @@
     {"roomId":{"name":"rm_level_2","path":"rooms/rm_level_2/rm_level_2.yy",},},
     {"roomId":{"name":"rm_level_3","path":"rooms/rm_level_3/rm_level_3.yy",},},
     {"roomId":{"name":"rm_level_4","path":"rooms/rm_level_4/rm_level_4.yy",},},
+    {"roomId":{"name":"rm_level_3b","path":"rooms/rm_level_3b/rm_level_3b.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

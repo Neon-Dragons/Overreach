@@ -6,7 +6,7 @@ if (!wave_triggered) return;
 if (wave_limit < 0) {
 	wave_triggered = false;
 	instance_create_layer(x,y,"Instances",obj_dialogue_child1_end);
-	instance_create_layer(1792,352,"Instances",obj_door);
+	instance_create_layer(5728,352,"Instances",obj_door);
 	wave_limit = 3;
 }
 // === Countdown between waves ===
@@ -19,7 +19,7 @@ if (!wave_active) {
 }
 else {
     // === Check if all enemies are dead ===
-    if (instance_exists(obj_enemy) == false) {
+    if (instance_exists(obj_drone) == false) {
         wave_active = false;
         wave += 1;
 		wave_limit -= 1;
