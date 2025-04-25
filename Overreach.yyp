@@ -46,6 +46,7 @@
     {"id":{"name":"obj_dialogue_child3","path":"objects/obj_dialogue_child3/obj_dialogue_child3.yy",},},
     {"id":{"name":"obj_dialogue_child4","path":"objects/obj_dialogue_child4/obj_dialogue_child4.yy",},},
     {"id":{"name":"obj_dialogue_child5","path":"objects/obj_dialogue_child5/obj_dialogue_child5.yy",},},
+    {"id":{"name":"obj_dialogue_scene1","path":"objects/obj_dialogue_scene1/obj_dialogue_scene1.yy",},},
     {"id":{"name":"obj_dialogue_trigger","path":"objects/obj_dialogue_trigger/obj_dialogue_trigger.yy",},},
     {"id":{"name":"obj_dialogue","path":"objects/obj_dialogue/obj_dialogue.yy",},},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},},

@@ -8,6 +8,7 @@ if (!showing_dialog) {
         
         // Only unpause when dialogue ends
         global.game_paused = false;
+		global.game_state = "playing";
         return;
     }
 
@@ -17,9 +18,18 @@ if (!showing_dialog) {
     current_dialog = dialog.pop();
     showing_dialog = true;
 } else {
-	timer--
-	if (timer <= 0) {
-        showing_dialog = false;
-		timer = 160;
+	
+	if (global.game_state == "scene") {
+	    if (keyboard_check_released(key_next)) {
+	        showing_dialog = false;
+	        alpha = 0;
+	    }	
+	}
+	else {
+		timer--
+		if (timer <= 0) {
+	        showing_dialog = false;
+			timer = 160;
+		}
 	}
 }

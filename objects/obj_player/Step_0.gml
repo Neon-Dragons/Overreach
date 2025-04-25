@@ -75,8 +75,10 @@ if (hsp != 0) {
 		&& !place_meeting(x + sign_h, y, obj_elena)) {
             x += sign_h;
 			//Elena Grabbed Movement
-			if (obj_elena.currentState == States.Grabbed) {
-				obj_elena.x += sign_h;
+			if (instance_exists(obj_elena)) {
+				if (obj_elena.currentState == States.Grabbed) {
+					obj_elena.x += sign_h;
+				}
 			}
         } else {
             hsp = 0;
@@ -93,8 +95,10 @@ if (vsp != 0) {
 		&& !place_meeting(x, y + sign_v, obj_elena)) {
             y += sign_v;
 			//Elena Grabbed Movement
-			if (obj_elena.currentState == States.Grabbed) {
-				obj_elena.y += sign_v;
+			if (instance_exists(obj_elena)) {
+				if (obj_elena.currentState == States.Grabbed) {
+					obj_elena.y += sign_v;
+				}
 			}
         } else {
             vsp = 0;

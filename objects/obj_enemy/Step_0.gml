@@ -66,7 +66,10 @@ if (instance_exists(obj_player)) {
             var bullet = instance_create_layer(x, y, "Instances", obj_bullet_enemy);
 			
             var angle = point_direction(x, y, player.x, player.y);
-            bullet.direction = angle - 5;
+			if (angle < 270 && angle > 90)
+				bullet.direction = angle - 5;
+			else
+				bullet.direction = angle + 5;		
 			}
             timer = 20;
         }
