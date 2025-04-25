@@ -71,8 +71,10 @@ if (keyboard_check_pressed(vk_space) && place_meeting(x, y + 1, obj_surface) && 
 if (hsp != 0) {
     var sign_h = sign(hsp);
     repeat(abs(hsp)) {
-        if (!place_meeting(x + sign_h, y, obj_surface) && !place_meeting(x + sign_h, y, obj_enemy)
-		&& !place_meeting(x + sign_h, y, obj_elena)) {
+  if (!place_meeting(x + sign_h, y, obj_surface) &&
+    !place_meeting(x + sign_h, y, obj_enemy) &&
+    !(place_meeting(x + sign_h, y, obj_elena) && obj_elena.currentState != States.Grabbed)) {
+
             x += sign_h;
 			//Elena Grabbed Movement
 			if (instance_exists(obj_elena)) {
@@ -91,8 +93,10 @@ if (hsp != 0) {
 if (vsp != 0) {
     var sign_v = sign(vsp);
     repeat(abs(vsp)) {
-        if (!place_meeting(x, y + sign_v, obj_surface) && !place_meeting(x, y + sign_v, obj_enemy)
-		&& !place_meeting(x, y + sign_v, obj_elena)) {
+    if (!place_meeting(x, y + sign_v, obj_surface) &&
+    !place_meeting(x, y + sign_v, obj_enemy) &&
+    !(place_meeting(x, y + sign_v, obj_elena) && obj_elena.currentState != States.Grabbed)) {
+
             y += sign_v;
 			//Elena Grabbed Movement
 			if (instance_exists(obj_elena)) {

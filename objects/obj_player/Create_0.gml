@@ -25,3 +25,4 @@ if (global.pending_load) {
     global.pending_load = false;
 }
 last_hit_time = 0;
+elena = instance_find(obj_elena, 0);

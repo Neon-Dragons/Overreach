@@ -8,6 +8,6 @@ switch (global.game_state) {
         break;
 
     case "gameover":
-        draw_text(100, 100, "GAME OVER\n[1] Retry Level\n[2] Restart Game\n[3] Main Menu\n[4] Exit");
+        draw_text(100, 100, "GAME OVER\n[1] Retry Level\n[2] Restart Game\n[3] Main Menu\n[4] Load Game \n [5] Exit");
         break;
 }

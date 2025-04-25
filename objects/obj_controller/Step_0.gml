@@ -98,9 +98,18 @@ case "gameover":
     }
 
     // Quit game
-    if (keyboard_check_pressed(ord("4"))) {
+    if (keyboard_check_pressed(ord("5"))) {
         game_end();
     }
+	// Load game (useful during testing or checkpoints)
+if (keyboard_check_pressed(ord("4"))) {
+    scr_load_game();
+    global.feedback_text = "Game Loaded";
+    global.feedback_timer = 90;
+    global.pause_ui_visible = false;
+    global.game_state = "playing";
+}
+
     break;
 
 }
