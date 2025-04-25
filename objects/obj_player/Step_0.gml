@@ -24,6 +24,9 @@ is_sneaking = keyboard_check(vk_shift);
 if (place_meeting(x + move, y, obj_enemy) == true) {
 	move = 0;
 }
+if (place_meeting(x + move, y, obj_elena) == true) {
+	move = 0;
+}
 if (place_meeting(x + move, y, obj_wall) == true) {
 	move= 0;
 }
@@ -51,7 +54,8 @@ if (keyboard_check_pressed(vk_space) && place_meeting(x, y + 1, obj_surface) && 
 if (hsp != 0) {
     var sign_h = sign(hsp);
     repeat(abs(hsp)) {
-        if (!place_meeting(x + sign_h, y, obj_surface) && !place_meeting(x + sign_h, y, obj_enemy)) {
+        if (!place_meeting(x + sign_h, y, obj_surface) && !place_meeting(x + sign_h, y, obj_enemy)
+		&& !place_meeting(x + sign_h, y, obj_elena)) {
             x += sign_h;
         } else {
             hsp = 0;
@@ -64,7 +68,8 @@ if (hsp != 0) {
 if (vsp != 0) {
     var sign_v = sign(vsp);
     repeat(abs(vsp)) {
-        if (!place_meeting(x, y + sign_v, obj_surface) && !place_meeting(x, y + sign_v, obj_enemy)) {
+        if (!place_meeting(x, y + sign_v, obj_surface) && !place_meeting(x, y + sign_v, obj_enemy)
+		&& !place_meeting(x, y + sign_v, obj_elena)) {
             y += sign_v;
         } else {
             vsp = 0;
