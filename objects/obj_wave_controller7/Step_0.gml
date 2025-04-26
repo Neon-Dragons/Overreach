@@ -5,14 +5,14 @@ if (!wave_triggered) return;
 // stop waves after limit is reached
 if (wave_limit < 0) {
 	wave_triggered = false;
-	wave_limit = 2;
+	wave_limit = 1;
 }
 // === Countdown between waves ===
 if (!wave_active) {
     spawn_timer -= 1;
     if (spawn_timer <= 0) {
         wave_active = true;
-        spawn_wave(wave, 10, 750, 150);
+		spawn_wave(wave, -470, -50, 150);
     }
 }
 else {
