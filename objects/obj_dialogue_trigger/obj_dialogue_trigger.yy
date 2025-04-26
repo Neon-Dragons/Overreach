@@ -34,5 +34,5 @@
     "path":"sprites/spr_dialogue_trigger/spr_dialogue_trigger.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

@@ -18,7 +18,7 @@ max_hp = 100;
 display_hp = max_hp;
 heal_rate = 10;
 last_hit_time = 0;
-weapon_mode = "melee"; // "melee" or "ranged"
+weapon_mode = "ranged"; // "melee" or "ranged"
 if (global.pending_load) {
     x = global.load_x;
     y = global.load_y;

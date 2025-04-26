@@ -62,6 +62,7 @@ vsp += grv;
 
 if (keyboard_check_pressed(vk_space) && place_meeting(x, y + 1, obj_surface) && !is_ducking) {
     vsp = jmp;
+	
 }
 
 // ============================
@@ -98,10 +99,16 @@ if (vsp != 0) {
     !(place_meeting(x, y + sign_v, obj_elena) && obj_elena.currentState != States.Grabbed)) {
 
             y += sign_v;
-			//Elena Grabbed Movement
 			if (instance_exists(obj_elena)) {
+				
+				//If Elena Grabbed
 				if (obj_elena.currentState == States.Grabbed) {
-					obj_elena.y += sign_v;
+					  if (!place_meeting(obj_elena.x, obj_elena.y + sign_v, obj_surface) &&
+							!place_meeting(obj_elena.x, obj_elena.y + sign_v, obj_enemy)){
+								obj_elena.y += sign_v;
+							}
+							else
+								obj_elena.y += 0;
 				}
 			}
         } else {

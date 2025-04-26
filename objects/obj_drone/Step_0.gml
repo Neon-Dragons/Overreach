@@ -34,10 +34,10 @@ if (instance_exists(obj_player)) {
 			if (angle > 180 && angle < 270)
 				bullet.direction = angle +15;
 			if (angle > 270)
-				bullet.direction = angle - 5;
+				bullet.direction = angle - 15;
 			}
 
-            timer = 8;
+            timer = 10;
         }
     }
 }
