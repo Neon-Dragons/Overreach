@@ -27,6 +27,10 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"foundElena","filters":[],"listItems":[],"multiselect":false,"name":"foundElena","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"playerWeapon","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"playerWeapon","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_gun","path":"sprites/spr_gun/spr_gun.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_gun","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"meetBoss","filters":[],"listItems":[],"multiselect":false,"name":"meetBoss","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

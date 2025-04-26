@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_dialogue_trigger",
+  "%Name":"obj_spawn_trigger10",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_dialogue_trigger",
+  "name":"obj_spawn_trigger10",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_dialogue_trigger",
-    "path":"sprites/spr_dialogue_trigger/spr_dialogue_trigger.yy",
+    "name":"spr_spawn_trigger",
+    "path":"sprites/spr_spawn_trigger/spr_spawn_trigger.yy",
   },
   "spriteMaskId":null,
   "visible":false,

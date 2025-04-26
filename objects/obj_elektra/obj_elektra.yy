@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_dialogue_trigger",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_elektra",
+  "eventList":[],
   "managed":true,
-  "name":"obj_dialogue_trigger",
+  "name":"obj_elektra",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_dialogue_trigger",
-    "path":"sprites/spr_dialogue_trigger/spr_dialogue_trigger.yy",
+    "name":"spr_elektra_idle",
+    "path":"sprites/spr_elektra_idle/spr_elektra_idle.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

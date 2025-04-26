@@ -1,0 +1,1 @@
+obj_ui.foundElena = true;

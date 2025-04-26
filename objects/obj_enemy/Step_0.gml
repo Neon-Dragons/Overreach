@@ -34,6 +34,32 @@ if (global.game_state == "playing") {
     if (place_meeting(x - vsp, y, obj_player)) {
         vsp = 0;
     }
+	
+	    // === Collisions with elena ===
+	if (place_meeting(x - vsp, y, obj_elena) || (place_meeting(x + vsp, y, obj_elena))) {
+		
+        vsp = 0;
+		var elena = instance_nearest(x, y, obj_elena);
+        var dist = point_distance(x, y, elena.x, elena.y);
+		    timer--;
+            if (timer <= 0) {
+                if (dist <= sightRange) {
+                    audio_play_sound(snd_gunshot, 1, false);
+                    var bullet = instance_create_layer(x, y, "Instances", obj_bullet_enemy);
+
+                    var angle = point_direction(x, y, elena.x, elena.y);
+
+                    // Add variation or spread
+                    if (angle < 270 && angle > 90)
+                        bullet.direction = angle - 5;
+                    else
+                        bullet.direction = angle + 5;
+                }
+
+                timer = 20;
+            }
+			return;
+    }
 
     // === Enemy Logic ===
     if (instance_exists(obj_player)) {

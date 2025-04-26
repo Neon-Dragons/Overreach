@@ -167,10 +167,14 @@ else {
 // === WEAPON SWAPPING =======
 // ============================
 if (keyboard_check_pressed(ord("Q"))) {
-    if (weapon_mode == "melee")
+    if (weapon_mode == "melee") {
 		weapon_mode = "ranged"
-	else
+		obj_ui.playerWeapon = spr_gun;
+	}
+	else {
+		obj_ui.playerWeapon = spr_melee;
 		weapon_mode = "melee"
+	}
 }
 
 // ============================
