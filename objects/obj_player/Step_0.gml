@@ -208,7 +208,10 @@ if (weapon_mode == "ranged" && keyboard_check_pressed(ord("F")) && !(keyboard_ch
 if (weapon_mode == "ranged" && keyboard_check_pressed(ord("F")) && keyboard_check(vk_lcontrol)) {
 		audio_play_sound(snd_gunshot,1,false)
 		var pointDirection = point_direction(x,y, mouse_x, mouse_y);
-		var b = instance_create_layer(x + facing * 12, y - 20, layer, obj_bullet);
+		if (sprite_index == spr_player_duck)
+			var b = instance_create_layer(x + facing * 12, y - 20, layer, obj_bullet);
+		else
+			b = instance_create_layer(x + facing * 12, y - 40, layer, obj_bullet);
 		b.direction = pointDirection;
 		b.image_angle = pointDirection;
 		b.speed = 24;
