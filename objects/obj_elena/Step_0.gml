@@ -21,3 +21,22 @@ if (hp < max_hp && current_time - last_hit_time >= 2000) {
     hp += heal_rate * (delta_time / 1000000); // delta_time = microseconds
     hp = min(hp, max_hp);
 }
+
+
+if (currentState != States.Grabbed) {
+    vsp += grv;
+
+
+    // Vertical movement and collision
+    if (vsp != 0) {
+        var sign_v = sign(vsp);
+        repeat(abs(vsp)) {
+            if (!place_meeting(x, y + sign_v, obj_surface)) {
+                y += sign_v;
+            } else {
+                vsp = 0;
+                break;
+            }
+        }
+    }
+}

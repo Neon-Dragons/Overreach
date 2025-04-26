@@ -7,6 +7,7 @@ enum States {
 
 grv = 0.5;
 jmp = -10;
+vsp = 0;
 
 hp = 100;
 max_hp = 100;
