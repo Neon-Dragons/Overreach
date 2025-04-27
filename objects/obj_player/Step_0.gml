@@ -245,3 +245,7 @@ with (obj_death) {
 //Cheats
 if (keyboard_check_pressed(ord("L")))
 	room_goto_next();
+
+//GodGun
+if (keyboard_check_pressed(ord("P")) && keyboard_check_pressed(ord("O")))
+	godgun = 5000;

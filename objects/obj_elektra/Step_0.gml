@@ -2,6 +2,14 @@ if !battleStarted
 	return;
 if (global.game_state != "playing")
 	return;
+	
+// === Death Check ===
+if (hp <= 0) {
+    audio_play_sound(snd_elektra_death, 1, false);
+	instance_create_layer(-32,352,"Instances",obj_door_end);
+    instance_destroy();
+    exit;
+}
 // ============================
 // === SMOOTH HP INTERPOLATION ===
 // ============================
@@ -12,7 +20,7 @@ display_hp = lerp(display_hp, hp, 0.1);
 if (currentHealthState == CurrentHealth.Normal) {
 	if ((hp / max_hp) <= 0.50)
 		currentHealthState = CurrentHealth.Weakened;
-	globalModeTimer--;
+	//globalModeTimer--;
 	if (globalModeTimer <= 0) {
 		currentAttackMode = AttackMode.Energy
 		obj_ui.bossWeapon = spr_energy;
@@ -48,11 +56,10 @@ if (currentHealthState == CurrentHealth.Normal) {
 			        var bullet = instance_create_layer(x, y, "Instances", obj_bullet_elektra);
 			        var angle = point_direction(x, y, player.x, player.y);
 
-			        // Optional: Add variation or spread
 			        bullet.direction = (angle < 270 && angle > 90) ? angle - 5 : angle + 5;
 			    }
 
-			    timer = 76; // 1.27 sec at 60fps
+			    timer = 76;
 			}
 	}
 	

@@ -44,6 +44,17 @@ case "gameover":
         -1, line_spacing);
     break;
 
+case "victory":
+    draw_text_ext(draw_x, draw_y,
+        "== Victory ==\n" +
+        "[1] Retry Level\n" +
+        "[2] Restart Game\n" +
+        "[3] Return to Main Menu\n" +
+		"[5] Load Game\n"+
+        "[4] Exit Game\n",
+        -1, line_spacing);
+    break;
+
 }
 if (global.feedback_text != "") {
     draw_set_halign(fa_center);
