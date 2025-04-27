@@ -31,6 +31,7 @@
         "GMSprite",
       ],"listItems":[],"multiselect":false,"name":"playerWeapon","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_gun","path":"sprites/spr_gun/spr_gun.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_gun","varType":5,},
     {"$GMObjectProperty":"v1","%Name":"meetBoss","filters":[],"listItems":[],"multiselect":false,"name":"meetBoss","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"bossWeapon","filters":[],"listItems":[],"multiselect":false,"name":"bossWeapon","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_gun","path":"sprites/spr_gun/spr_gun.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_gun","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

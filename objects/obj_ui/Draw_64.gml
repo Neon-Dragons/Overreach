@@ -163,7 +163,7 @@ if (global.game_state == "playing" && instance_exists(obj_elena) && foundElena) 
 }
 
 // DAME ELEKTRA HEALTH
-if (global.game_state == "playing" && instance_exists(obj_elena) && meetBoss) {
+if (global.game_state == "playing" && instance_exists(obj_elektra) && meetBoss) {
     // === HEALTH BAR SETTINGS ===
     var bar_w = 200;
     var bar_h = 24;
@@ -171,12 +171,19 @@ if (global.game_state == "playing" && instance_exists(obj_elena) && meetBoss) {
     var bar_x = 1920 - bar_w - 20; // 20 pixels from right edge
     var bar_y = 20; // vertical position
        
-    var hp_actual = 100;
-	var hp_display = 100;
-    var hp_max = 100;
+    var hp_actual = obj_elektra.hp;
+	var hp_display = obj_elektra.display_hp;
+    var hp_max = obj_elektra.max_hp;
 
     var ratio_actual = hp_actual / hp_max;
     var ratio_display = hp_display / hp_max;
+	
+ // === DRAW SPRITE TO LEFT OF BAR ===
+    var icon_sprite = bossWeapon; // Make sure this sprite exists
+    var icon_x = bar_x - sprite_get_width(icon_sprite) + 15;
+    var icon_y = bar_y + (bar_h / 2); // Centered vertically
+	
+	draw_sprite(icon_sprite, 0, icon_x, icon_y);
 
     // === BACKGROUND BAR ===
     draw_set_color(make_color_rgb(50, 50, 50));
@@ -203,4 +210,6 @@ if (global.game_state == "playing" && instance_exists(obj_elena) && meetBoss) {
     draw_set_halign(fa_center);
     draw_set_valign(fa_top);
     draw_text(bar_x + bar_w / 2, bar_y + bar_h + 4, "DAME ELEKTRA REMINGTON");
+	
+
 }
