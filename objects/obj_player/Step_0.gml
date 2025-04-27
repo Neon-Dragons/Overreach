@@ -60,7 +60,12 @@ if (move != 0) facing = move;
 // ============================
 vsp += grv;
 
-if (keyboard_check_pressed(vk_space) && place_meeting(x, y + 1, obj_surface) && !is_ducking) {
+if (keyboard_check_pressed(vk_space) && (
+	place_meeting(x, y + 1, obj_surface) && !is_ducking || 
+	place_meeting(x, y + 1, obj_elena) && !is_ducking ||
+	place_meeting(x, y + 1, obj_enemy) && !is_ducking||
+	place_meeting(x, y + 1, obj_elektra) && !is_ducking))
+{
 
     vsp = jmp;
 	
@@ -75,6 +80,7 @@ if (hsp != 0) {
     repeat(abs(hsp)) {
   if (!place_meeting(x + sign_h, y, obj_surface) &&
     !place_meeting(x + sign_h, y, obj_enemy) &&
+    !place_meeting(x + sign_h, y, obj_elektra) &&
     !(place_meeting(x + sign_h, y, obj_elena) && obj_elena.currentState != States.Grabbed)) {
 
             x += sign_h;
@@ -97,6 +103,7 @@ if (vsp != 0) {
     repeat(abs(vsp)) {
     if (!place_meeting(x, y + sign_v, obj_surface) &&
     !place_meeting(x, y + sign_v, obj_enemy) &&
+    !place_meeting(x, y + sign_v, obj_elektra) &&
     !(place_meeting(x, y + sign_v, obj_elena) && obj_elena.currentState != States.Grabbed)) {
 
             y += sign_v;
