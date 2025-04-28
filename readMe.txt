@@ -17,7 +17,7 @@ Mouse Movement - Aim Direction
 Space – Jump / Advance Dialogue
 
 Cheats:
-P + O - All enemies die in on (with the gun only)
+P + O - All enemies die in one hit (with the gun only)
 L - Skip Level
 
 Guide:
