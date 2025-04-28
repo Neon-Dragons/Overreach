@@ -109,7 +109,7 @@ if (global.game_state == "playing" && instance_exists(obj_player)) {
 
     // === NAME TEXT BELOW BAR ===
     draw_set_valign(fa_top); // align text from the top
-    draw_text(bar_x + bar_w / 2, bar_y + bar_h + 4, "ALEX CROSS");
+    draw_text(bar_x + bar_w / 2, bar_y + bar_h + 4, "LEX CROSS");
 	
 	//Display current Weapon
     var spr = playerWeapon; 
