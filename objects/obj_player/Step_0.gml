@@ -14,8 +14,14 @@ display_hp = lerp(display_hp, hp, 0.1);
 // === INPUT ================
 // ============================
 var move = 0;
-if (keyboard_check(ord("A"))) move -= 1;
-if (keyboard_check(ord("D"))) move += 1;
+if (keyboard_check(ord("A"))){
+	image_xscale = -1;
+	move -= 1
+}
+if (keyboard_check(ord("D"))) {
+	move += 1;
+		image_xscale = 1;
+}
 
 // Elena Grabbing Input
 if (keyboard_check_pressed(ord("W"))) {
@@ -156,13 +162,17 @@ if (is_ducking) {
     sprite_index = spr_player_duck;
 }
 else if (!grounded) {
-    sprite_index = spr_player_idle; // Change to jump sprite if available
+    sprite_index = spr_player_idle;
+		image_speed  =0;    // Change to jump sprite if available
 }
 else if (hsp != 0) {
     sprite_index = spr_player_walk;
+		image_speed  =1;
+
 }
 else {
     sprite_index = spr_player_idle;
+	image_speed  =0;
 }
 
 // ============================
