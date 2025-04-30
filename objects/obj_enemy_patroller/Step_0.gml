@@ -45,6 +45,8 @@ if (place_meeting(x - vsp, y, obj_player) == true) {
 if (instance_exists(obj_player)) {
     var player = instance_nearest(x, y, obj_player); // safest way to get position
 	var dist = point_distance(x, y, player.x, player.y);
+	var dir = sign(player.x - x);
+	if(dir != 0) image_xscale = sign(player.x - x);
     if (distance_to_object(player) < detectionRange) {
 		if (distance_to_object(player) >= stoppingRange) {
 			if (x < player.x) {
@@ -83,7 +85,6 @@ if (instance_exists(obj_player)) {
 
 
 
-image_xscale = facing;
 
 
 //image_xscale = facing; // Optional: flip sprite

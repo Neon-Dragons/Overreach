@@ -30,7 +30,8 @@ if (currentHealthState == CurrentHealth.Normal) {
 
 	        var player = instance_nearest(x, y, obj_player);
 	        var dist = point_distance(x, y, player.x, player.y);
-			
+			var dir = sign(player.x - x);
+			if(dir != 0) image_xscale = sign(player.x - x);
 			// === Movement ===
 			if (dist < detectionRange) {
 			    // === Basic Left/Right Chasing ===

@@ -65,12 +65,14 @@ if (global.game_state == "playing") {
     if (instance_exists(obj_player)) {
         var player = instance_nearest(x, y, obj_player);
         var dist = point_distance(x, y, player.x, player.y);
-
+		    var dir = sign(player.x - x);
+			if(dir != 0) image_xscale = sign(player.x - x);
         if (dist < detectionRange) {
 
             // === Basic Left/Right Chasing ===
             if (dist >= stoppingRange) {
                 if (x < player.x) {
+
                     if (!place_meeting(x + move_speed, y, obj_surface)) {
                         x += move_speed;
                     }
@@ -103,7 +105,7 @@ if (global.game_state == "playing") {
     }
 
     // === Facing Direction Flip ===
-    image_xscale = facing;
+    //image_xscale = facing;
 
     // === Melee Attack ===
     if (current_time - last_attack_time > attack_cooldown) {
