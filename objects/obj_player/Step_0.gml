@@ -28,17 +28,22 @@ if (keyboard_check(ord("D"))) {
 
 // Elena Grabbing Input
 if (keyboard_check_pressed(ord("W"))) {
-
+	
+		if !(instance_exists(obj_elena))
+			return;
 		if (obj_elena.currentState == States.Grabbed && grounded) {
 			obj_elena.currentState = States.Idle;
 		}
 	if (place_meeting(x +4, y, obj_elena) == true || place_meeting(x - 4, y, obj_elena) == true) {
+		show_debug_message("Meeting Elena: " + string(place_meeting(x + 4, y, obj_elena) || place_meeting(x - 4, y, obj_elena)));
 		if (obj_elena.currentState != States.Grabbed && grounded) {
 			obj_elena.currentState = States.Grabbed;
 		}
 
 
 	}
+		show_debug_message(elena.currentState)
+
 }
 	
 

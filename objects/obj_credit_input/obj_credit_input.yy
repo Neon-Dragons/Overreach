@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_elena",
+  "%Name":"obj_credit_input",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_elena",
+  "name":"obj_credit_input",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,13 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_elena",
-    "path":"sprites/spr_elena/spr_elena.yy",
-  },
-  "spriteMaskId":{
-    "name":"spr_elena",
-    "path":"sprites/spr_elena/spr_elena.yy",
-  },
+  "spriteId":null,
+  "spriteMaskId":null,
   "visible":true,
 }
