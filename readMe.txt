@@ -20,8 +20,12 @@ Cheats:
 P + O - All enemies die in one hit (with the gun only)
 L - Skip Level
 
-Guide:
-The core gameplay mechanic is the wave system. You are meant to kill all the enemies in the area. After killing all the enemies, another wave of enemies will spawn. Each wave increases the number of enemies you need to eliminate.
+Walkthrough:
+The main objective of the game is to escort princess Elena out of a capital building. There are 4 levels (not including the level you find Elena) and you must fight your way through it with a gun and a sword. The sword can deflect bullets with correct timing, and you can aim your gun by holding control and moving your mouse to target enemies. You can also crouch to double your damage, but the catch is that you also take double damage.
+These levels will also spawn waves of enemies that you have to eliminate in order to advance. There are 3 enemy types. A soldier, a turret, and a drone. All three of them use weapons with different fire rates. The turret has the fastest rate of fire, while the soldier has the slowest. The turret is also stationary, so I can be sniped from a distance. The drone and soldier will chase you down. The drone is inaccurate when moving underneath it, which can be exploited.
+As soon as you find Elena you must backtrack to where you came from. Like before these levels will spawn enemies, however not all of them require you to eliminate them all. You do need to have Elena grabbed in order to advance (pressing W). Be careful because all 3 enemy types will be present.
+The last area has a boss that has similar AI to the soldier type. The boss’s weapon does a lot of damage, and it can also pierce through targets. As soon as you defeat the boss you will finish the game.
+
 
 Licensing:
 Meaty Gunshot by morganpurkis (https://pixabay.com/sound-effects/meaty-gunshot-101257/)
