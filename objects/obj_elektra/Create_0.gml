@@ -12,8 +12,8 @@ enum AttackMode {
 	EnergyMultiple,
 }
 // Health
-hp = 3000;
-max_hp = 3000;
+hp = 1500;
+max_hp = 1500;
 display_hp = max_hp;
 currentHealthState = CurrentHealth.Normal;
 currentAttackMode = AttackMode.Kinetic;

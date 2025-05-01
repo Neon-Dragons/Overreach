@@ -19,6 +19,7 @@ display_hp = max_hp;
 heal_rate = 10;
 last_hit_time = 0;
 weapon_mode = "ranged"; // "melee" or "ranged"
+obj_ui.playerWeapon = spr_gun;
 if (global.pending_load) {
     x = global.load_x;
     y = global.load_y;
