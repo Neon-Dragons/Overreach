@@ -51,9 +51,9 @@ if (global.game_state == "playing") {
 
                     // Add variation or spread
                     if (angle < 270 && angle > 90)
-                        bullet.direction = angle - 5;
+                        bullet.direction = angle - 10;
                     else
-                        bullet.direction = angle + 5;
+                        bullet.direction = angle + 10;
                 }
 
                 timer = 20;
