@@ -81,13 +81,19 @@ if (hsp != 0) {
   if (!place_meeting(x + sign_h, y, obj_surface) &&
     !place_meeting(x + sign_h, y, obj_enemy) &&
     !place_meeting(x + sign_h, y, obj_elektra) &&
-    !(place_meeting(x + sign_h, y, obj_elena) && obj_elena.currentState != States.Grabbed)) {
+    !(place_meeting(x + sign_h, y, obj_elena) && 
+	obj_elena.currentState != States.Grabbed) &&
+	    !(place_meeting(x + sign_h, y, obj_elena))) {
 
             x += sign_h;
 			//Elena Grabbed Movement
 			if (instance_exists(obj_elena)) {
 				if (obj_elena.currentState == States.Grabbed) {
 					obj_elena.x += sign_h;
+					if (sign_h < 0)
+						obj_elena.image_xscale = -1;
+					else
+						obj_elena.image_xscale = 1;
 				}
 			}
         } else {
