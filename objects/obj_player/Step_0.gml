@@ -1,7 +1,10 @@
 // ============================
 // === EXIT IF NOT PLAYING ===
 // ============================
-if (global.game_state != "playing") exit;
+if (global.game_state != "playing")  {
+    sprite_index = spr_player_idle;
+	exit;
+}
 
 
 
@@ -39,16 +42,7 @@ if (keyboard_check_pressed(ord("W"))) {
 is_ducking = keyboard_check(ord("S")) || keyboard_check(vk_down);
 is_sneaking = keyboard_check(vk_shift);
 
-//Collisions
-if (place_meeting(x + move, y, obj_enemy) == true) {
-	move = 0;
-}
-if (place_meeting(x + move, y, obj_elena) == true) {
-	move = 0;
-}
-if (place_meeting(x + move, y, obj_wall) == true) {
-	move= 0;
-}
+
 
 
 // ============================
