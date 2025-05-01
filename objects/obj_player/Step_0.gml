@@ -28,13 +28,15 @@ if (keyboard_check(ord("D"))) {
 
 // Elena Grabbing Input
 if (keyboard_check_pressed(ord("W"))) {
-	if (place_meeting(x + 4, y, obj_elena) == true || place_meeting(x - 4, y, obj_elena) == true) {
+
+	if (place_meeting(x + 5, y, obj_elena) == true || place_meeting(x - 5, y, obj_elena) == true) {
 		if (obj_elena.currentState != States.Grabbed && grounded) {
 			obj_elena.currentState = States.Grabbed;
 		}
 		else if (obj_elena.currentState == States.Grabbed && grounded) {
 			obj_elena.currentState = States.Idle;
 		}
+
 	}
 }
 	
@@ -83,7 +85,7 @@ if (hsp != 0) {
     !place_meeting(x + sign_h, y, obj_elektra) &&
     !(place_meeting(x + sign_h, y, obj_elena) && 
 	obj_elena.currentState != States.Grabbed) &&
-	    !(place_meeting(x + sign_h, y, obj_elena))) {
+	    !(place_meeting(x + sign_h*2, y, obj_elena))) {
 
             x += sign_h;
 			//Elena Grabbed Movement
