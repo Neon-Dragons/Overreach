@@ -110,6 +110,7 @@
     {"id":{"name":"scr_save_game","path":"scripts/scr_save_game/scr_save_game.yy",},},
     {"id":{"name":"spawn_wave_drone","path":"scripts/spawn_wave_drone/spawn_wave_drone.yy",},},
     {"id":{"name":"spawn_wave","path":"scripts/spawn_wave/spawn_wave.yy",},},
+    {"id":{"name":"shd_red_tint","path":"shaders/shd_red_tint/shd_red_tint.yy",},},
     {"id":{"name":"snd_background_music","path":"sounds/snd_background_music/snd_background_music.yy",},},
     {"id":{"name":"snd_drone_sound","path":"sounds/snd_drone_sound/snd_drone_sound.yy",},},
     {"id":{"name":"snd_elektra_death","path":"sounds/snd_elektra_death/snd_elektra_death.yy",},},

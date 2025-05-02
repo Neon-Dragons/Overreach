@@ -112,11 +112,15 @@ if (global.game_state == "playing") {
         if (instance_exists(obj_player)) {
             var dist = point_distance(x, y, obj_player.x, obj_player.y);
             if (dist <= attack_range) {
-                with (obj_player) {
-                    hp -= other.damage;
-                    last_hit_time = current_time;
-                    show_debug_message("Player hit by enemy!");
-                }
+						with (obj_player) {
+						    hp -= other.damage;
+						    last_hit_time = current_time;
+
+						    // Trigger shader flash on damage
+						    other.shader_flash_timer = other.shader_flash_duration;
+
+						    show_debug_message("Player hit by enemy!");
+						}
 
                 last_attack_time = current_time;
             }

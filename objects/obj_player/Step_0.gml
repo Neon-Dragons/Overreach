@@ -243,6 +243,7 @@ if (weapon_mode == "ranged" && keyboard_check_pressed(ord("F")) && keyboard_chec
 // === GAME OVER ON 0 HP =====
 // ============================
 if (hp <= 0 && global.game_state != "gameover") {
+	
     global.game_state = "gameover";
     show_debug_message("Player died from HP loss!");
 	visible=false;
@@ -260,6 +261,9 @@ with (obj_death) {
     }
 }
 
+if (shader_flash_timer > 0) {
+    shader_flash_timer--;
+}
 
 //Cheats
 if (keyboard_check_pressed(ord("L")))

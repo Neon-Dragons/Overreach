@@ -10,3 +10,5 @@ global.load_y = 0;
 
 global.feedback_text = "";
 global.feedback_timer = 0;
+// Usually in obj_controller Create event
+global.wave_status = array_create(20, false); // Assuming up to 20 waves

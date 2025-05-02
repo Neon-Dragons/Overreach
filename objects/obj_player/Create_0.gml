@@ -27,3 +27,16 @@ if (global.pending_load) {
 }
 last_hit_time = 0;
 elena = instance_find(obj_elena, 0);
+shader_flash_timer = 0;
+shader_flash_duration = 10;
+u_flashAmount = shader_get_uniform(shd_red_tint, "u_flashAmount");
+blood_system = part_system_create();
+blood_type = part_type_create();
+
+part_type_shape(blood_type, pt_shape_pixel);
+part_type_size(blood_type, 1, 1, 0, 0);
+part_type_color1(blood_type, c_red);
+part_type_speed(blood_type, 2, 4, 0, 0);
+part_type_direction(blood_type, 0, 360, 0, 0);
+part_type_gravity(blood_type, 0.2, 270);
+part_type_life(blood_type, 15, 30);
