@@ -120,6 +120,7 @@
     {"id":{"name":"snd_gunshot","path":"sounds/snd_gunshot/snd_gunshot.yy",},},
     {"id":{"name":"snd_machine_gun","path":"sounds/snd_machine_gun/snd_machine_gun.yy",},},
     {"id":{"name":"snd_melee","path":"sounds/snd_melee/snd_melee.yy",},},
+    {"id":{"name":"guard2","path":"sprites/guard2/guard2.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
     {"id":{"name":"spr_bullet_elektra","path":"sprites/spr_bullet_elektra/spr_bullet_elektra.yy",},},
