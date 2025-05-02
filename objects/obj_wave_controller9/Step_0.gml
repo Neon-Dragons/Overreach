@@ -12,7 +12,7 @@ if (!wave_active) {
     spawn_timer -= 1;
     if (spawn_timer <= 0) {
         wave_active = true;
-        spawn_wave(wave, 5800, 6000, 224);
+        spawn_wave(wave, 5800, 6000, 200);
 		spawn_wave_drone(0, 5800, 6000, 32);
 		spawn_wave(wave, 2400, 3000, 256);
 

@@ -34,9 +34,10 @@ if (keyboard_check_pressed(ord("W"))) {
 		if (obj_elena.currentState == States.Grabbed && grounded) {
 			obj_elena.currentState = States.Idle;
 		}
-	if (place_meeting(x +4, y, obj_elena) == true || place_meeting(x - 4, y, obj_elena) == true) {
-		show_debug_message("Meeting Elena: " + string(place_meeting(x + 4, y, obj_elena) || place_meeting(x - 4, y, obj_elena)));
-		if (obj_elena.currentState != States.Grabbed && grounded) {
+	if (place_meeting(x +16, y, obj_elena) == true || place_meeting(x - 16, y, obj_elena) == true) {
+		show_debug_message("Meeting Elena: " + string(place_meeting(x + 16, y, obj_elena) || place_meeting(x - 16, y, obj_elena)));
+		show_debug_message("grounded: " + string(grounded));
+		if (obj_elena.currentState == States.Idle && grounded) {
 			obj_elena.currentState = States.Grabbed;
 		}
 
@@ -44,6 +45,14 @@ if (keyboard_check_pressed(ord("W"))) {
 	}
 		show_debug_message(elena.currentState)
 
+}
+if (keyboard_check_pressed(ord("R"))) {
+	
+		if !(instance_exists(obj_elena))
+			return;
+		if (obj_elena.currentState == States.Grabbed && grounded) {
+			obj_elena.currentState = States.Idle;
+		}
 }
 	
 
