@@ -41,6 +41,9 @@
     "name":"spr_enemy",
     "path":"sprites/spr_enemy/spr_enemy.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_enemy",
+    "path":"sprites/spr_enemy/spr_enemy.yy",
+  },
   "visible":true,
 }
