@@ -11,6 +11,7 @@ A – Move Left
 S – Crouch (Does double damage)
 F – Use Weapon (Can deflect bullets)
 W - Hold Elena / Let Go of Elena
+R - Let go of Elena
 Q – Swap Weapons
 Left Ctrl (Hold) - Aim
 Mouse Movement - Aim Direction
