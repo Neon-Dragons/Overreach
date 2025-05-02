@@ -137,6 +137,7 @@
     {"id":{"name":"spr_energy_multiple","path":"sprites/spr_energy_multiple/spr_energy_multiple.yy",},},
     {"id":{"name":"spr_energy","path":"sprites/spr_energy/spr_energy.yy",},},
     {"id":{"name":"spr_gun","path":"sprites/spr_gun/spr_gun.yy",},},
+    {"id":{"name":"spr_main_screen_backround","path":"sprites/spr_main_screen_backround/spr_main_screen_backround.yy",},},
     {"id":{"name":"spr_melee_hitbox_placeholder","path":"sprites/spr_melee_hitbox_placeholder/spr_melee_hitbox_placeholder.yy",},},
     {"id":{"name":"spr_melee","path":"sprites/spr_melee/spr_melee.yy",},},
     {"id":{"name":"spr_obj_death","path":"sprites/spr_obj_death/spr_obj_death.yy",},},
