@@ -6,7 +6,7 @@ if (showing_dialog == true) {
 	var height = 30;
 	var border = 5;
 	var padding = 50;
-	var offsetY = 0;
+	var offsetY = 55;
 	var guiWdith = display_get_gui_width()
 	//height = string_height(current_dialog.message);
 	
