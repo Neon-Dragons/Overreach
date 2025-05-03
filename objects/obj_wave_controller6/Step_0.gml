@@ -12,7 +12,7 @@ if (!wave_active) {
     spawn_timer -= 1;
     if (spawn_timer <= 0) {
         wave_active = true;
-		spawn_wave(wave, 2520, 3060, 890);
+		spawn_wave(wave, 2520, 3060, 870);
     }
 }
 else {
