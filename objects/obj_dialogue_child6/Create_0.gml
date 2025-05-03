@@ -2,5 +2,6 @@ event_inherited();
 
 
 
-dialog.add("We got drones now.");
-dialog.add("Just give up and die along with the princess!");
+dialog.add("Guards: We got drones now.");
+dialog.add("Guards: Just give up and hand Elena over safely.");
+dialog.add("Lex: I'm not doing that, and I'm not dying by that. Watch this.");

@@ -2,6 +2,6 @@ event_inherited();
 
 
 
-dialog.add("Fuck it send in the drones.");
-dialog.add("Looks I have to do this myself.");
-dialog.add("You fools go distract him while I go get ready.");
+dialog.add("Guards: F*$@ it send in the drones.");
+dialog.add("???: Incompentent! All of you! You can't kill one guy!?");
+dialog.add("???: I'll be down soon. And you'll all feel my wrath. Lex Cross, i'm coming for you.  ");

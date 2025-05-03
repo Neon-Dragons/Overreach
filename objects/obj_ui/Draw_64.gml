@@ -43,7 +43,7 @@ case "gameover":
         "[4] Exit Game\n",
         -1, line_spacing);
     break;
-
+	
 case "victory":
     draw_text_ext(draw_x, draw_y,
         "== Victory ==\n" +

@@ -3,10 +3,10 @@ if (showing_dialog == true) {
 	var text_y = 18;
 	
 	//If you want longer dialogue adjust this.
-	var height = 150;
+	var height = 30;
 	var border = 5;
 	var padding = 50;
-	var offsetY = 150;
+	var offsetY = 0;
 	var guiWdith = display_get_gui_width()
 	//height = string_height(current_dialog.message);
 	
