@@ -1,0 +1,1 @@
+other.hitCount += 1;
